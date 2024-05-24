@@ -1,6 +1,6 @@
 name: pull-requerst-workflow
 on: 
-  pull_request
+  pull_request:
     types: [opend]
 
 jobs:
