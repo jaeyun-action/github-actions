@@ -35,7 +35,7 @@ jobs:
             {
               "attachments": [
                 {
-                  "pretext": " create repo result",
+                  "pretext": "create repo result",
                   "color": "28a745",
                   "fields": [
                     {
@@ -47,6 +47,6 @@ jobs:
                 }
               ]
             }
-          env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
