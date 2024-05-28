@@ -90,7 +90,7 @@ jobs:
                   "type":"section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Environment : ${{ needs.set-environment.outputs.environment  }}, Deploy Result"
+                    "text": "Environment : ${{ needs.set-environment.outputs.environment }}, Deploy Result"
                   }
                 }
               ]
