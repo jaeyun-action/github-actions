@@ -23,11 +23,11 @@ jobs:
         with:
           repository: "jaeyun-action/github-actions-module"
           path: ./actions-module
-        - name: use test module
-          uses: ./actions-module/common/test
-          with:
-            NODE_VERSION: 'lts'
-            WORKING_DIRECTORY: 'my-app'
+      - name: use test module
+        uses: ./actions-module/common/test
+        with:
+          NODE_VERSION: "lts"
+          WORKING_DIRECTORY: "my-app"
 
   set-environment:
     if: github.event.pull_request.merged == true || github.ref_type == 'tag'
