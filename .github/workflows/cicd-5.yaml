@@ -26,7 +26,7 @@ jobs:
       - name: use test module
         uses: ./actions-module/common/test
         with:
-          NODE_VERSION: "lts"
+          NODE_VERSION: "20"
           WORKING_DIRECTORY: "my-app"
 
   set-environment:
