@@ -56,7 +56,7 @@ jobs:
     strategy:
       matrix:
         environment: ["${{ needs.set-environment.outputs.environment }}"]
-    environment: ${{  matrix.environment  }}
+    environment: ${{ matrix.environment }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -70,7 +70,7 @@ jobs:
     strategy:
       matrix:
         environment: ["${{ needs.set-environment.outputs.environment }}"]
-    environment: ${{  matrix.environment  }}
+    environment: ${{ matrix.environment }}
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
@@ -83,7 +83,7 @@ jobs:
         if: always()
         uses: ./actions-module/common/slack
         with:
-          ENVIRONMENT: ${{  matrix.environment  }}
+          ENVIRONMENT: ${{ matrix.environment }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   create-pr:
@@ -124,7 +124,7 @@ jobs:
     strategy:
       matrix:
         environment: ["prod"]
-    environment: ${{  matrix.environment  }}
+    environment: ${{ matrix.environment }}
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
@@ -137,5 +137,5 @@ jobs:
         if: always()
         uses: ./actions-module/common/slack
         with:
-          ENVIRONMENT: ${{  matrix.environment  }}
+          ENVIRONMENT: ${{ matrix.environment }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
